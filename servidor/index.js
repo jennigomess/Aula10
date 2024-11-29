@@ -34,6 +34,7 @@ app.post('/alunos', (req, res) => {
         }
         res.status(201).json({ message: 'Aluno cadastrado com sucesso!', id: result.insertId });
     });
+});
 
 app.get('/alunos', (req, res) => {
     const sql = 'SELECT * FROM alunos';
@@ -49,4 +50,4 @@ app.get('/alunos', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
-});
+
